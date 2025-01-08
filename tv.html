@@ -1,0 +1,685 @@
+<!-- External Resources -->
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' rel='stylesheet'/>
+  
+    <!-- JW Player Library -->
+ <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
+  
+<!-- Font Test Stylesheet/Css -->
+<link href='https://fonts.maateen.me/kalpurush/font.css' rel='stylesheet'>
+<style>
+			body, article, h1, h2, h3, h4, h5, h6, div, a, span, p, table, tr, td, input, select, class, button, .topbar, .main-menu, .breadcrumb, .copyrights-area, form span.required {
+				font-family: 'Kalpurush', Arial, sans-serif !important;
+			}
+		</style>
+</link>
+
+<!-- Font Test Stylesheet/Css --> 
+
+
+
+<style id='page-skin-1' type='text/css'><!--
+/* Original CSS from your template */
+/*
+-----------------------------------------------
+Template Style
+Name: Live TV
+Version: 1.0
+Developer: Sultan Arabi
+Modify: Maruf Hosen
+Contact Mail: ourcontactmail24@gmail.com
+----------------------------------------------- */
+/* Base Reset */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'SolaimanLipi', Arial, sans-serif;
+background: white;
+margin: 0;
+padding: 0;
+height: 100vh;
+display: flex;
+flex-direction: column;
+}
+/* Main Content */
+.main-content {
+flex: 1;
+display: flex;
+flex-direction: column;
+}
+/* Player Container */
+.player-container {
+background: black;
+width: 100%;
+position: relative;
+flex-shrink: 0;
+display: flex; justify-content: center; align-items: center; height: 100vh; background: #000; }
+  
+.video-container {
+    position: relative;
+    background: #000 url('https://iili.io/2jPL8j2.webp') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the container */
+    width: 100%; max-width: 100%;
+}
+
+/* Channel Section */
+.channel-section {
+flex: 1;
+display: flex;
+flex-direction: column;
+background: white;
+overflow: hidden;
+width: 100%;
+max-height: 400px;
+}
+/* Channel Tabs */
+.channel-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust as necessary */
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+  padding: 5px;
+  gap: 2px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping of child elements */
+}
+
+.channel-tabs::-webkit-scrollbar {
+  height: 2px; /* Customize scrollbar height */
+}
+
+.channel-tabs::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Customize scrollbar color */
+  border-radius: 2px; /* Optional: Round edges */
+}
+
+.tab-btn {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 6px;
+padding: 12px;
+border: none;
+background: none;
+cursor: pointer;
+border-radius: 8px;
+color: #666;
+font-size: 14px;
+transition: all 0.3s ease;
+white-space: nowrap;
+}
+.tab-btn.active {
+background: #007bff;
+color: white;
+}
+/* Search Container */
+.search-container {
+padding: 8px;
+background: #fff;
+border-bottom: 1px solid #eee;
+}
+.search-input {
+width: 100%;
+padding: 8px;
+border: 1px solid #007bff;
+border-radius: 6px;
+font-size: 14px;
+}
+/* Channel Grid */
+.channel-grid {
+padding: 0;
+overflow-y: auto;
+flex: 1;
+max-height: calc(400px - 100px);
+}
+/* Channel Card */
+.channel-card {
+background: #fff;
+padding: 12px;
+cursor: pointer;
+position: relative;
+transition: all 0.3s ease;
+display: flex;
+align-items: center;
+gap: 15px;
+border-bottom: 1px solid #eee;
+}
+.channel-card:hover {
+background: #f8f9fa;
+}
+.channel-image {
+width: 50px;
+height: 50px;
+flex-shrink: 0;
+}
+.channel-image img {
+width: 100%;
+height: 100%;
+object-fit: contain;
+border-radius: 8px;
+}
+.channel-info {
+flex: 1;
+min-width: 0;
+}
+.channel-name {
+font-weight: bold;
+font-size: 14px;
+margin-bottom: 4px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.channel-category {
+font-size: 12px;
+color: #666;
+}
+/* Action Buttons */
+.action-buttons {
+display: flex;
+gap: 8px;
+}
+.favorite-btn {
+border: none;
+background: #f0f0f0;
+width: 36px;
+height: 36px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #666;
+font-size: 16px;
+transition: all 0.2s ease;
+}
+.favorite-btn.active {
+color: #dc3545;
+background: #ffe6e6;
+}
+/* Mobile View (Default) */
+@media (max-width: 766px) {
+.player-container {
+height: 30vh;
+}
+.video-container {
+height: 100%;
+}
+.channel-section {
+max-height: 70vh;
+}
+.channel-grid {
+max-height: calc(70vh - 100px);
+}
+}
+/* Mobile View (Default) */
+@media (max-width: 767px) {
+.player-container {
+height: 30vh;
+}
+.video-container {
+height: 100%;
+}
+.channel-section {
+max-height: 70vh;
+}
+.channel-grid {
+max-height: calc(70vh - 100px);
+}
+}
+/* Mobile View (Default) */
+@media (max-width: 768px) {
+.player-container {
+height: 30vh;
+}
+.video-container {
+height: 100%;
+}
+.channel-section {
+max-height: 70vh;
+}
+.channel-grid {
+max-height: calc(70vh - 100px);
+}
+}
+/* Desktop View */
+@media (min-width: 769px) {
+.main-content {
+flex-direction: row;
+height: 100vh;
+}
+.player-container {
+flex: 1;
+height: 100vh;
+max-width: 100%;
+}
+.video-container {
+height: 100%;
+}
+.channel-section {
+flex: 1;
+height: 100vh;
+max-height: none;
+max-width: 100%;
+}
+.channel-grid {
+max-height: calc(100vh - 110px);
+}
+}
+/* Utility Classes */
+.loading {
+text-align: center;
+padding: 20px;
+}
+.loading:after {
+content: "";
+display: inline-block;
+width: 30px;
+height: 30px;
+border: 3px solid #f3f3f3;
+border-top: 3px solid #007bff;
+border-radius: 50%;
+animation: spin 1s linear infinite;
+}
+.error-message {
+padding: 20px;
+text-align: center;
+color: #666;
+}
+.no-favorites {
+padding: 20px;
+text-align: center;
+color: #666;
+}
+/* Animations */
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+/* Hide Blogger Default Elements */
+.blog-posts.hfeed {
+display: none;
+}
+.widget.Blog {
+display: none;
+}
+/* PWA Support */
+@media (display-mode: standalone) {
+body {
+padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+}
+
+--></style>
+
+  
+  <div class="col-md-12">
+<style> 
+
+           .notice-movies{margin-top:3px;background:#ff0000;color:white;position:relative;padding:10px;overflow:hidden;font-family:var(--font-secondary);border-radius:7px}.notice-movies::before{content:'';position:absolute;border-left:17px solid var(--black);border-bottom:17px solid var(--black);border-top:17px solid transparent;border-right:17px solid transparent;left:98px;top:0;z-index:1}.notice-movies::after{content:'বিজ্ঞপ্তি:';position:absolute;height:100%;padding:0 6px;line-height:43px;background:Green;color:white;font-family:var(--font-primary);font-weight:600;left:0;top:0} </style>
+
+       
+
+       <center> <marquee class="notice-movies" scrollamount="4"> ***আম&#2494;দ&#2503;র ওয&#2492;&#2503;বস&#2494;ইট&#2503; আপন&#2494;ক&#2503; স&#2509;ব&#2494;গতম&#2404; বর&#2509;তম&#2494;ন&#2503; আম&#2494;দ&#2503;র ওয়&#2503;ব স&#2494;ইট&#2503;র আপড&#2503;ট&#2503;র ক&#2494;জ চলছ&#2503;, আপড&#2503;ট চল&#2494;ক&#2494;ল&#2496;ন সময&#2492; ক&#2495;ছ&#2497; চ&#2509;য&#2494;ন&#2503;ল ড&#2494;উন হত&#2503; প&#2494;র&#2503; আব&#2494;র প&#2509;ল&#2503; হত&#2503; ক&#2495;ছ&#2497;ট&#2494; সময&#2492; ন&#2495;ত&#2503; প&#2494;র&#2503;&#2404; আব&#2494;র অন&#2503;কক&#2509;ষ&#2503;ত&#2509;র&#2503; আপন&#2494;র স&#2494;র&#2509;ভ&#2494;র ও ইন&#2509;ট&#2494;রন&#2503;ট&#2503;র উপর ন&#2495;র&#2509;ভর করব&#2503;&#2404; আম&#2494;দ&#2503;র স&#2494;থ&#2503; থ&#2494;ক&#2494;র জন&#2509;য ধন&#2509;যব&#2494;দ&#2404;*** </marquee>
+
+       </center>
+</div> 
+  
+
+<!-- Main Content -->
+  
+<div class='main-content'>
+
+
+<div class='player-container'>
+<div class='video-container' id='videoPlayer'></div>
+</div>
+<div class='channel-section'>
+<div class='channel-tabs'>
+
+
+<button class='tab-btn active' id='allChannelsTab'>
+<i class='fas fa-television'></i> চ্যানেল
+            </button>
+<button class='tab-btn' id='categoriesTab'>
+<i class='fas fa-list'></i> ক্যাটাগরি
+            </button>
+<button class='tab-btn' id='serverChangeTab'>
+<i class='fas fa-rotate'></i> সার্ভার পরিবর্তন  <span id='currentServerDisplay'>করুন</span>
+</button>  
+  
+<button class='tab-btn' id='favoritesTab'>
+<i class='fas fa-heart'></i> বুকমার্ক
+            </button>
+
+  
+  
+</div>
+<div class='search-container'>
+<input class='search-input' id='searchInput' placeholder='চ্যানেল অনুসন্ধান করুন...' type='text'/>
+</div>
+<div class='channel-grid' id='channelGrid'>
+<div class='loading'></div>
+</div>
+</div>
+</div>
+
+<!-- JavaScript -->
+<script type='text/javascript'>//<![CDATA[
+let player;
+const channelGrid = document.getElementById('channelGrid');
+const currentServerDisplay = document.getElementById('currentServerDisplay');
+const searchInput = document.getElementById('searchInput');
+
+let channels = [];
+let categories = new Set();
+let favorites = new Set(JSON.parse(localStorage.getItem('favorites') || '[]'));
+let currentServer = 'https://shz.al/6C2A';
+
+const servers = [
+   'https://shz.al/6C2A',
+   'https://shz.al/zCAG',
+   'https://linkchur.top/playlist.m3u',
+   'https://byte-capsule.vercel.app/api/aynaott/hybrid.m3u',
+'https://raw.githubusercontent.com/FunctionError/PiratesTv/main/combined_playlist.m3u'
+  
+];
+
+  
+  
+  
+// Channel Card Creation
+function createChannelCard(channel) {
+    const isFavorite = favorites.has(channel.url);
+    return `
+        <div class="channel-card" onclick="playChannel('${channel.url}')">
+            <div class="channel-image">
+                <img src="${channel.logo}" alt="${channel.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/250x250'">
+            </div>
+            <div class="channel-info">
+                <div class="channel-name">${channel.title}</div>
+                <div class="channel-category">${channel.category}</div>
+            </div>
+            <div class="action-buttons">
+                <button class="favorite-btn ${isFavorite ? 'active' : ''}" 
+                        onclick="toggleFavorite(event, '${channel.url}')">
+                    <i class="fas fa-heart"></i>
+                </button>
+            </div>
+        </div>
+    `;
+}
+
+// Player Functions
+ function playChannel(url) {
+        // Destroy previous JW Player instance if it exists
+        if (window.jwplayerInstance) {
+            window.jwplayerInstance.remove();
+        }
+
+        // Initialize JW Player
+        window.jwplayerInstance = jwplayer("videoPlayer").setup({
+            file: url, // HLS Stream URL
+            type: "hls",
+            width: "100%",
+            height: "100%",
+            autostart: true,
+            mute: false,
+            playbackRateControls: true,
+            allowfullscreen: true,
+        });
+
+    const videoContainer = document.querySelector('.video-container');
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        videoContainer.addEventListener('click', async () => {
+            try {
+                // Request full screen
+                if (!document.fullscreenElement) {
+                    await videoContainer.requestFullscreen();
+                    
+                    // Rotate screen to landscape if supported
+                    if (screen.orientation && screen.orientation.lock) {
+                        await screen.orientation.lock('landscape');
+                    }
+                } else {
+                    // Exit fullscreen and unlock orientation
+                    await document.exitFullscreen();
+                    if (screen.orientation && screen.orientation.unlock) {
+                        screen.orientation.unlock();
+                    }
+                }
+            } catch (error) {
+                console.error('Error handling fullscreen or orientation:', error);
+            }
+        });
+    }
+}
+
+
+// M3U Parser
+async function parseM3U(url) {
+    try {
+        channelGrid.innerHTML = '<div class="loading"></div>';
+        const proxyUrl = 'https://api.allorigins.win/raw?url=';
+        const response = await fetch(proxyUrl + encodeURIComponent(url));
+        
+        if (!response.ok) throw new Error('Network response was not ok');
+        
+        const text = await response.text();
+        const lines = text.split('\n');
+        
+        channels = [];
+        categories.clear();
+        
+        let currentChannel = {};
+        
+        lines.forEach(line => {
+            line = line.trim();
+            if (line.startsWith('#EXTINF:')) {
+                const info = line.split(',')[1];
+                const categoryMatch = line.match(/group-title="([^"]+)"/);
+                const category = categoryMatch ? categoryMatch[1] : 'Others';
+                const logoMatch = line.match(/tvg-logo="([^"]+)"/);
+                const logo = logoMatch ? logoMatch[1] : 'https://via.placeholder.com/250x250';
+                
+                currentChannel = {
+                    title: info,
+                    category: category,
+                    logo: logo
+                };
+                categories.add(category);
+            } else if (line.startsWith('http')) {
+                currentChannel.url = line;
+                channels.push(currentChannel);
+                currentChannel = {};
+            }
+        });
+        
+        showAllChannels();
+    } catch (error) {
+        console.error('Error loading M3U:', error);
+        channelGrid.innerHTML = '<div class="error-message">Error loading channels. Please try again later.</div>';
+    }
+}
+
+// Channel Display Functions
+function showAllChannels() {
+    channelGrid.innerHTML = channels.map(channel => createChannelCard(channel)).join('');
+}
+
+function showCategories() {
+    channelGrid.innerHTML = Array.from(categories)
+        .sort()
+        .map(category => {
+            const count = channels.filter(ch => ch.category === category).length;
+            return `
+                <div class="channel-card" onclick="showChannelsByCategory('${category}')">
+                    <div class="channel-info">
+                        <div class="channel-name">${category}</div>
+                        <div class="channel-category">${count} Channels</div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+}
+
+function showChannelsByCategory(category) {
+    const filteredChannels = channels.filter(ch => ch.category === category);
+    channelGrid.innerHTML = filteredChannels.map(channel => createChannelCard(channel)).join('');
+}
+
+function showFavorites() {
+    const favoriteChannels = channels.filter(ch => favorites.has(ch.url));
+    channelGrid.innerHTML = favoriteChannels.length > 0 
+        ? favoriteChannels.map(channel => createChannelCard(channel)).join('')
+        : '<div class="error-message">এখনো কোনো প্রিয় চ্যানেল নেই।</div>';
+}
+
+// Favorite Toggle Function
+function toggleFavorite(event, url) {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    if (favorites.has(url)) {
+        favorites.delete(url);
+    } else {
+        favorites.add(url);
+    }
+    
+    localStorage.setItem('favorites', JSON.stringify(Array.from(favorites)));
+    
+    const currentTab = document.querySelector('.tab-btn.active');
+    if (currentTab.id === 'favoritesTab') {
+        showFavorites();
+    } else {
+        const btn = event.target.closest('.favorite-btn');
+        btn.classList.toggle('active');
+    }
+}
+
+// Search Function
+searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    const filteredChannels = channels.filter(channel => 
+        channel.title.toLowerCase().includes(searchTerm) ||
+        channel.category.toLowerCase().includes(searchTerm)
+    );
+    
+    channelGrid.innerHTML = filteredChannels.map(channel => createChannelCard(channel)).join('');
+});
+
+// Server Change Function
+document.getElementById('serverChangeTab').onclick = function() {
+    const currentServerIndex = servers.indexOf(currentServer);
+    const nextServerIndex = (currentServerIndex + 1) % servers.length;
+    currentServer = servers[nextServerIndex];
+    currentServerDisplay.textContent = nextServerIndex + 1;
+    parseM3U(currentServer);
+};
+
+// Tab Switch Function
+document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        switch(btn.id) {
+            case 'allChannelsTab':
+                showAllChannels();
+                break;
+            case 'categoriesTab':
+                showCategories();
+                break;
+            case 'favoritesTab':
+                showFavorites();
+                break;
+        }
+    });
+});
+
+
+
+
+
+
+
+// রাইট-ক্লিক নিষ্ক্রিয় করা
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            alert("দুঃখিত!  রাইট-ক্লিক নিষ্ক্রিয় করা হয়েছে।");
+        });
+
+        // কীবোর্ড শর্টকাট নিষ্ক্রিয় করা
+        document.addEventListener('keydown', function(event) {
+            // F12 (ডেভেলপার টুলস)
+            if (event.key === 'F12') {
+                event.preventDefault();
+                alert("F12 নিষ্ক্রিয করা হয়েছে়।");
+            }
+
+            // Ctrl+Shift+I (Inspect Element)
+            if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+                event.preventDefault();
+                alert("Inspect element নিষ্ক্রিয় করা হয়েছে.");
+            }
+
+            // Ctrl+Shift+J (Console)
+            if (event.ctrlKey && event.shiftKey && event.key === 'J') {
+                event.preventDefault();
+                alert("Console নিষ্ক্রিয় করা হয়েছে. ");
+            }
+
+            // Ctrl+U (View Source Code)
+            if (event.ctrlKey && event.key === 'u') {
+                event.preventDefault();
+                alert("View source নিষ্ক্রিয় করা হয়েছে.");
+            }
+
+            // Ctrl+S (Save Page)
+            if (event.ctrlKey && event.key === 's') {
+                event.preventDefault();
+                alert("পৃষ্ঠা সংরক্ষণ নিষ্ক্রিয় করা হয়েছে.");
+            }
+
+            // Ctrl+P (Print)
+            if (event.ctrlKey && event.key === 'p') {
+                event.preventDefault();
+                alert("প্রিন্ট নিষ্ক্রিয় করা হয়েছে।");
+            }
+        });
+
+
+ // iframe ব্লক করা
+        if (window.top !== window.self) {
+            // সতর্কবার্তা দেখান এবং পেজ রিডাইরেক্ট করুন
+            alert("এই ওয়েবসাইট iframe লোড করা যাবে না.");
+            window.top.location = window.self.location;
+        }
+
+// Security Features
+document.addEventListener('contextmenu', (event) => event.preventDefault());
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'F12' || 
+        (event.ctrlKey && event.shiftKey && ['I', 'J', 'C'].includes(event.key)) || 
+        (event.ctrlKey && event.key === 'U')) {
+        event.preventDefault();
+    }
+});
+
+
+
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    parseM3U(servers[0]);
+});
+//]]>
+  
+  
+  
+</script>
