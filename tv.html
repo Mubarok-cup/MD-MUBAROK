@@ -1,22 +1,20 @@
 <!-- External Resources -->
 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' rel='stylesheet'/>
   
-    <!-- JW Player Library -->
- <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
+<!-- JW Player Library -->
+<script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
   
 <!-- Font Test Stylesheet/Css -->
 <link href='https://fonts.maateen.me/kalpurush/font.css' rel='stylesheet'/>
 <style>
-			body, article, h1, h2, h3, h4, h5, h6, div, a, span, p, table, tr, td, input, select, class, button, .topbar, .main-menu, .breadcrumb, .copyrights-area, form span.required {
-				font-family: 'Kalpurush', Arial, sans-serif !important;
-			}
-		</style>
+    body, article, h1, h2, h3, h4, h5, h6, div, a, span, p, table, tr, td, input, select, class, button, .topbar, .main-menu, .breadcrumb, .copyrights-area, form span.required {
+        font-family: 'Kalpurush', Arial, sans-serif !important;
+    }
+</style>
 
 <!-- Font Test Stylesheet/Css --> 
 
-
-
-<style id='page-skin-1' type='text/css'><!--
+<style id='page-skin-1' type='text/css'>
 /* Original CSS from your template */
 /*
 -----------------------------------------------
@@ -213,36 +211,6 @@ max-height: 70vh;
 max-height: calc(70vh - 100px);
 }
 }
-/* Mobile View (Default) */
-@media (max-width: 767px) {
-.player-container {
-height: 30vh;
-}
-.video-container {
-height: 100%;
-}
-.channel-section {
-max-height: 70vh;
-}
-.channel-grid {
-max-height: calc(70vh - 100px);
-}
-}
-/* Mobile View (Default) */
-@media (max-width: 768px) {
-.player-container {
-height: 30vh;
-}
-.video-container {
-height: 100%;
-}
-.channel-section {
-max-height: 70vh;
-}
-.channel-grid {
-max-height: calc(70vh - 100px);
-}
-}
 /* Desktop View */
 @media (min-width: 769px) {
 .main-content {
@@ -311,62 +279,61 @@ padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset
 }
 }
 
---></style>
+</style>
 
-  
-  <div class="col-md-12">
+<div class="col-md-12">
 <style> 
+.notice-movies {
+    margin-top: 3px;
+    background: #ff0000;
+    color: white;
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+    font-family: var(--font-secondary);
+    border-radius: 7px;
+}
+</style>
 
-           .notice-movies{margin-top:3px;background:#ff0000;color:white;position:relative;padding:10px;overflow:hidden;font-family:var(--font-secondary);border-radius:7px}.notice-movies::before{content:'';position:absolute;border-left:17px solid var(--black);border-bottom:17px solid var(--black);border-top:17px solid transparent;border-right:17px solid transparent;left:98px;top:0;z-index:1}.notice-movies::after{content:'বিজ্ঞপ্তি:';position:absolute;height:100%;padding:0 6px;line-height:43px;background:Green;color:white;font-family:var(--font-primary);font-weight:600;left:0;top:0} </style>
-
-       
-
-       <center> <marquee class="notice-movies" scrollamount="4"> ***আম&#2494;দ&#2503;র ওয&#2492;&#2503;বস&#2494;ইট&#2503; আপন&#2494;ক&#2503; স&#2509;ব&#2494;গতম&#2404; বর&#2509;তম&#2494;ন&#2503; আম&#2494;দ&#2503;র ওয়&#2503;ব স&#2494;ইট&#2503;র আপড&#2503;ট&#2503;র ক&#2494;জ চলছ&#2503;, আপড&#2503;ট চল&#2494;ক&#2494;ল&#2496;ন সময&#2492; ক&#2495;ছ&#2497; চ&#2509;য&#2494;ন&#2503;ল ড&#2494;উন হত&#2503; প&#2494;র&#2503; আব&#2494;র প&#2509;ল&#2503; হত&#2503; ক&#2495;ছ&#2497;ট&#2494; সময&#2492; ন&#2495;ত&#2503; প&#2494;র&#2503;&#2404; আব&#2494;র অন&#2503;কক&#2509;ষ&#2503;ত&#2509;র&#2503; আপন&#2494;র স&#2494;র&#2509;ভ&#2494;র ও ইন&#2509;ট&#2494;রন&#2503;ট&#2503;র উপর ন&#2495;র&#2509;ভর করব&#2503;&#2404; আম&#2494;দ&#2503;র স&#2494;থ&#2503; থ&#2494;ক&#2494;র জন&#2509;য ধন&#2509;যব&#2494;দ&#2404;*** </marquee>
-
-       </center>
-</div> 
-  
+<center>
+  <marquee class="notice-movies" scrollamount="4"> 
+    ***আমাদের ওয়েবসাইট আপনাকে স্বাগতম***
+  </marquee>
+</center>
+</div>
 
 <!-- Main Content -->
   
 <div class='main-content'>
-
-
-<div class='player-container'>
-<div class='video-container' id='videoPlayer'></div>
-</div>
-<div class='channel-section'>
-<div class='channel-tabs'>
-
-
-<button class='tab-btn active' id='allChannelsTab'>
-<i class='fas fa-television'></i> চ্যানেল
+    <div class='player-container'>
+        <div class='video-container' id='videoPlayer'></div>
+    </div>
+    <div class='channel-section'>
+        <div class='channel-tabs'>
+            <button class='tab-btn active' id='allChannelsTab'>
+                <i class='fas fa-television'></i> চ্যানেল
             </button>
-<button class='tab-btn' id='categoriesTab'>
-<i class='fas fa-list'></i> ক্যাটাগরি
+            <button class='tab-btn' id='categoriesTab'>
+                <i class='fas fa-list'></i> ক্যাটাগরি
             </button>
-<button class='tab-btn' id='serverChangeTab'>
-<i class='fas fa-rotate'></i> সার্ভার পরিবর্তন  <span id='currentServerDisplay'>করুন</span>
-</button>  
-  
-<button class='tab-btn' id='favoritesTab'>
-<i class='fas fa-heart'></i> বুকমার্ক
+            <button class='tab-btn' id='serverChangeTab'>
+                <i class='fas fa-rotate'></i> সার্ভার পরিবর্তন <span id='currentServerDisplay'>করুন</span>
             </button>
-
-  
-  
-</div>
-<div class='search-container'>
-<input class='search-input' id='searchInput' placeholder='চ্যানেল অনুসন্ধান করুন...' type='text'/>
-</div>
-<div class='channel-grid' id='channelGrid'>
-<div class='loading'></div>
-</div>
-</div>
+            <button class='tab-btn' id='favoritesTab'>
+                <i class='fas fa-heart'></i> বুকমার্ক
+            </button>
+        </div>
+        <div class='search-container'>
+            <input class='search-input' id='searchInput' placeholder='চ্যানেল অনুসন্ধান করুন...' type='text'/>
+        </div>
+        <div class='channel-grid' id='channelGrid'>
+            <div class='loading'></div>
+        </div>
+    </div>
 </div>
 
 <!-- JavaScript -->
-<script type='text/javascript'>//<![CDATA[
+<script type='text/javascript'>
 let player;
 const channelGrid = document.getElementById('channelGrid');
 const currentServerDisplay = document.getElementById('currentServerDisplay');
@@ -378,17 +345,13 @@ let favorites = new Set(JSON.parse(localStorage.getItem('favorites') || '[]'));
 let currentServer = 'https://shz.al/6C2A';
 
 const servers = [
-   'https://shz.al/6C2A',
-   'https://shz.al/zCAG',
-   'https://linkchur.top/playlist.m3u',
-   'https://byte-capsule.vercel.app/api/aynaott/hybrid.m3u',
-'https://raw.githubusercontent.com/FunctionError/PiratesTv/main/combined_playlist.m3u'
-  
+    'https://shz.al/6C2A',
+    'https://shz.al/zCAG',
+    'https://linkchur.top/playlist.m3u',
+    'https://byte-capsule.vercel.app/api/aynaott/hybrid.m3u',
+    'https://raw.githubusercontent.com/FunctionError/PiratesTv/main/combined_playlist.m3u'
 ];
 
-  
-  
-  
 // Channel Card Creation
 function createChannelCard(channel) {
     const isFavorite = favorites.has(channel.url);
@@ -412,23 +375,23 @@ function createChannelCard(channel) {
 }
 
 // Player Functions
- function playChannel(url) {
-        // Destroy previous JW Player instance if it exists
-        if (window.jwplayerInstance) {
-            window.jwplayerInstance.remove();
-        }
+function playChannel(url) {
+    // Destroy previous JW Player instance if it exists
+    if (window.jwplayerInstance) {
+        window.jwplayerInstance.remove();
+    }
 
-        // Initialize JW Player
-        window.jwplayerInstance = jwplayer("videoPlayer").setup({
-            file: url, // HLS Stream URL
-            type: "hls",
-            width: "100%",
-            height: "100%",
-            autostart: true,
-            mute: false,
-            playbackRateControls: true,
-            allowfullscreen: true,
-        });
+    // Initialize JW Player
+    window.jwplayerInstance = jwplayer("videoPlayer").setup({
+        file: url, // HLS Stream URL
+        type: "hls",
+        width: "100%",
+        height: "100%",
+        autostart: true,
+        mute: false,
+        playbackRateControls: true,
+        allowfullscreen: true,
+    });
 
     const videoContainer = document.querySelector('.video-container');
 
@@ -456,7 +419,6 @@ function createChannelCard(channel) {
         });
     }
 }
-
 
 // M3U Parser
 async function parseM3U(url) {
@@ -599,64 +561,27 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     });
 });
 
-
-
-
-
-
-
 // রাইট-ক্লিক নিষ্ক্রিয় করা
-        document.addEventListener('contextmenu', function(event) {
-            event.preventDefault();
-            alert("দুঃখিত!  রাইট-ক্লিক নিষ্ক্রিয় করা হয়েছে।");
-        });
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+    alert("দুঃখিত!  রাইট-ক্লিক নিষ্ক্রিয় করা হয়েছে।");
+});
 
-        // কীবোর্ড শর্টকাট নিষ্ক্রিয় করা
-        document.addEventListener('keydown', function(event) {
-            // F12 (ডেভেলপার টুলস)
-            if (event.key === 'F12') {
-                event.preventDefault();
-                alert("F12 নিষ্ক্রিয করা হয়েছে়।");
-            }
+// কীবোর্ড শর্টকাট নিষ্ক্রিয় করা
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'F12' || 
+        (event.ctrlKey && event.shiftKey && ['I', 'J', 'C'].includes(event.key)) || 
+        (event.ctrlKey && event.key === 'U')) {
+        event.preventDefault();
+        alert("Inspect element নিষ্ক্রিয় করা হয়েছে.");
+    }
+});
 
-            // Ctrl+Shift+I (Inspect Element)
-            if (event.ctrlKey && event.shiftKey && event.key === 'I') {
-                event.preventDefault();
-                alert("Inspect element নিষ্ক্রিয় করা হয়েছে.");
-            }
-
-            // Ctrl+Shift+J (Console)
-            if (event.ctrlKey && event.shiftKey && event.key === 'J') {
-                event.preventDefault();
-                alert("Console নিষ্ক্রিয় করা হয়েছে. ");
-            }
-
-            // Ctrl+U (View Source Code)
-            if (event.ctrlKey && event.key === 'u') {
-                event.preventDefault();
-                alert("View source নিষ্ক্রিয় করা হয়েছে.");
-            }
-
-            // Ctrl+S (Save Page)
-            if (event.ctrlKey && event.key === 's') {
-                event.preventDefault();
-                alert("পৃষ্ঠা সংরক্ষণ নিষ্ক্রিয় করা হয়েছে.");
-            }
-
-            // Ctrl+P (Print)
-            if (event.ctrlKey && event.key === 'p') {
-                event.preventDefault();
-                alert("প্রিন্ট নিষ্ক্রিয় করা হয়েছে।");
-            }
-        });
-
-
- // iframe ব্লক করা
-        if (window.top !== window.self) {
-            // সতর্কবার্তা দেখান এবং পেজ রিডাইরেক্ট করুন
-            alert("এই ওয়েবসাইট iframe লোড করা যাবে না.");
-            window.top.location = window.self.location;
-        }
+// iframe ব্লক করা
+if (window.top !== window.self) {
+    alert("এই ওয়েবসাইট iframe লোড করা যাবে না.");
+    window.top.location = window.self.location;
+}
 
 // Security Features
 document.addEventListener('contextmenu', (event) => event.preventDefault());
@@ -668,15 +593,8 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-
-
-
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     parseM3U(servers[0]);
 });
-//]]>
-  
-  
-  
 </script>
