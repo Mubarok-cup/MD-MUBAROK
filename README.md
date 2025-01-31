@@ -1,183 +1,40 @@
-নিচে একটি সম্পূর্ণ এবং সাজানো কোড উদাহরণ দেওয়া হলো যা **Hugging Face Transformers**, **FastAPI**, এবং **Gradio** ব্যবহার করে একটি বেসিক AI চ্যাটবট তৈরি ও ডেপ্লয় করবে:
+# হ্যালো! আমি মোঃ মোবারক 👋
 
----
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=2BF772&width=435&lines=সফটওয়্যার+ডেভেলপার;ওয়েব+টেকনোলজি+এনথুসিয়াস্ট;Problem+Solver;Open+Source+Contributor)](https://git.io/typing-svg)
 
-### **requirements.txt**
-```python
-torch>=2.0.0
-transformers>=4.30.0
-fastapi>=0.95.0
-uvicorn>=0.21.0
-gradio>=3.0.0
-datasets>=2.0.0
-python-multipart>=0.0.6
-```
+<p align="left">
+  <img src="https://komarev.com/ghpvc/?username= Mubarok-cup&label=Profile%20views&color=0e75b6&style=flat" alt="mobarok" />
+</p>
 
----
+## 🔧 টেক স্ট্যাক
 
-### **main.py** (মূল কোড)
-```python
-import json
-from typing import Dict, List
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from transformers import pipeline, GPT2Tokenizer, GPT2LMHeadModel, Trainer, TrainingArguments
-import gradio as gr
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
-# ----------------------------
-# ডেটা প্রস্তুতি (কাস্টম ডেটাসেট)
-# ----------------------------
-sample_data = [
-    {"question": "আপনার নাম কী?", "answer": "আমার নাম ডিপসিক AI।"},
-    {"question": "বাংলাদেশের রাজধানী?", "answer": "ঢাকা।"},
-    {"question": "পাইথন কী?", "answer": "একটি প্রোগ্রামিং ভাষা।"}
-]
+## 📌 পিন করা প্রজেক্ট
 
-# ডেটাসেট সেভ করুন JSON ফাইলে
-with open("data/train.json", "w", encoding="utf-8") as f:
-    json.dump(sample_data, f, ensure_ascii=False)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username= Mubarok-cup&repo=awesome-project)](https://github.com/ Mubarok-cup/awesome-project)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username= Mubarok-cup&repo=another-project)](https://github.com/ Mubarok-cup/another-project)
 
-# ----------------------------
-# মডেল ফাইন-টিউনিং (ঐচ্ছিক)
-# ----------------------------
-def train_model():
-    tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
-    model = GPT2LMHeadModel.from_pretrained("gpt2")
-    
-    # ডেটা লোড করুন
-    with open("data/train.json", "r", encoding="utf-8") as f:
-        data = json.load(f)
-    
-    # টোকেনাইজেশন
-    train_texts = [f"প্রশ্ন: {item['question']} উত্তর: {item['answer']}" for item in data]
-    train_encodings = tokenizer(train_texts, truncation=True, padding=True, max_length=128)
-    
-    # ট্রেনিং আর্গুমেন্টস
-    training_args = TrainingArguments(
-        output_dir="./results",
-        num_train_epochs=3,
-        per_device_train_batch_size=2,
-        save_steps=500,
-    )
-    
-    # ট্রেনার
-    trainer = Trainer(
-        model=model,
-        args=training_args,
-        train_dataset=train_encodings,
-    )
-    
-    trainer.train()
-    model.save_pretrained("fine-tuned-gpt2")
-    tokenizer.save_pretrained("fine-tuned-gpt2")
+## 📈 গিটহাব স্ট্যাটস
 
-# ----------------------------
-# ইনফারেন্স পাইপলাইন
-# ----------------------------
-try:
-    qa_pipeline = pipeline("text-generation", model="fine-tuned-gpt2")  # ফাইন-টিউনড মডেল
-except:
-    qa_pipeline = pipeline("text-generation", model="gpt2")  # ডিফল্ট মডেল
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username= Mubarok-cup&show_icons=true&theme=dark" alt="mobarok's GitHub stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user= Mubarok-cup&theme=dark" alt="mobarok's streak" />
+</p>
 
-# ----------------------------
-# FastAPI (API সার্ভার)
-# ----------------------------
-app = FastAPI()
+## 📫 যোগাযোগ
 
-class QuestionRequest(BaseModel):
-    question: str
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
+[![Facebook](https://img.shields.io/badge/-Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/yourprofile)
+[![Twitter](https://img.shields.io/badge/-Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/yourhandle)
+[![Gmail](https://img.shields.io/badge/-Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:youremail@gmail.com)
 
-@app.post("/ask/")
-async def ask_question(request: QuestionRequest):
-    try:
-        response = qa_pipeline(
-            f"প্রশ্ন: {request.question} উত্তর:",
-            max_length=100,
-            num_return_sequences=1,
-        )
-        answer = response[0]['generated_text'].split("উত্তর:")[-1].strip()
-        return {"answer": answer}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+## 💻 কোডিং অ্যাক্টিভিটি
 
-# ----------------------------
-# Gradio UI (ইন্টারফেস)
-# ----------------------------
-def gradio_interface(question: str) -> str:
-    response = qa_pipeline(f"প্রশ্ন: {question} উত্তর:", max_length=100)
-    return response[0]['generated_text'].split("উত্তর:")[-1].strip()
-
-ui = gr.Interface(
-    fn=gradio_interface,
-    inputs=gr.Textbox(label="প্রশ্ন লিখুন"),
-    outputs=gr.Textbox(label="উত্তর"),
-    title="ডিপসিক AI চ্যাটবট",
-    examples=["আপনার নাম কী?", "পৃথিবীর সবচেয়ে বড় দেশ কী?"]
-)
-
-# ----------------------------
-# রান কমান্ড
-# ----------------------------
-if __name__ == "__main__":
-    # মডেল ট্রেনিং (ঐচ্ছিক)
-    # train_model()
-    
-    # API সার্ভার রান করুন
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
-    
-    # Gradio UI রান করুন (এলাদা টার্মিনালে)
-    # ui.launch(share=True)
-```
-
----
-
-### **কোড ব্যবহারের নির্দেশনা**
-১. **ডিপেন্ডেন্সি ইনস্টল করুন**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-২. **ডেটাসেট প্রস্তুত করুন**:  
-   `data/train.json` ফাইলে আপনার কাস্টম প্রশ্ন-উত্তর যোগ করুন।
-
-৩. **মডেল ট্রেন করুন** (ঐচ্ছিক):  
-   `main.py`-এ `train_model()` ফাংশন আনকমেন্ট করুন এবং রান করুন:
-   ```bash
-   python main.py
-   ```
-
-৪. **API সার্ভার চালু করুন**:
-   ```bash
-   uvicorn main:app --reload
-   ```
-
-৫. **API টেস্ট করুন**:
-   ```bash
-   curl -X POST "http://localhost:8000/ask/" -H "Content-Type: application/json" -d '{"question": "বাংলাদেশের মুক্তিযুদ্ধ কত সালে হয়েছিল?"}'
-   ```
-
-৬. **Grido UI চালু করুন** (এলাদা টার্মিনালে):
-   ```bash
-   python main.py
-   ```
-
----
-
-### **আউটপুট স্ক্রিনশট**
-- **API রেসপন্স**:
-  ```json
-  {"answer":"১৯৭১ সালে।"}
-  ```
-
-- **Gradio ইন্টারফেস**:  
-  ![Gradio Interface](https://i.imgur.com/ABCD123.png)
-
----
-
-### **উন্নত করার টিপস**
-১. **লার্জার মডেল** ব্যবহার করুন (যেমন `gpt2-medium`, `EleutherAI/gpt-neo`)।
-২. **RAG প্যাটার্ন** ইমপ্লিমেন্ট করুন ([LangChain](https://python.langchain.com/) ব্যবহার করে)।
-৩. **ভেক্টর ডেটাবেস** (FAISS/Chroma) দিয়ে ডেটা রিট্রিভাল যোগ করুন।
-
-এই কোডটি একটি সম্পূর্ণ বেসিক AI চ্যাটবট তৈরি করে। স্কেল করার জন্য [Hugging Face ডকুমেন্টেশন](https://huggingface.co/docs) অনুসরণ করুন! 
+[![আমার কোডিং অ্যাক্টিভিটি](https://github-readme-activity-graph.vercel.app/graph?username= Mubarok-cup&theme=react-dark)](https://github.com/ Mubarok-cup)
